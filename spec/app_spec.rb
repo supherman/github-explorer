@@ -11,9 +11,8 @@ describe 'The HelloWorld App' do
     Sinatra::Application
   end
 
-  it "says hello" do
+  it "will response 200 OK" do
     get '/'
     last_response.should be_ok
-    last_response.body.should == 'Hello World'
   end
 end
