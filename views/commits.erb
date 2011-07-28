@@ -1,5 +1,16 @@
-<ol>
-  <% commits.each do |commit| %>
-    <li><%= commit.message %></li>
-  <% end unless commits.nil? %> 
-</ol>
+<table>
+  <thead>
+    <tr>
+      <th>date</th>
+      <th>message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% commits.each do |commit| %>
+      <tr>
+        <td><%= commit.date.strftime("%d-%m-%y") %></td>
+        <td><%= commit.message %></td>
+      </tr>
+    <% end unless commits.nil? %>
+  </tbody>
+</table>
