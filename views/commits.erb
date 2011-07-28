@@ -1,0 +1,5 @@
+<ol>
+  <% commits.each do |commit| %>
+    <li><%= commit.message %></li>
+  <% end unless commits.nil? %> 
+</ol>
